@@ -4,6 +4,8 @@ import {Helmet} from 'react-helmet'
 import { GlobalStyle } from './styles/globalStyle'
 import { darkTheme, lightTheme } from './styles/theme'
 import Layout from './components/Layout/Layout'
+import Roteator from './Roteator'
+
 
 export const ThemeContext = React.createContext(null)
 
@@ -18,10 +20,10 @@ const App = () =>
           <GlobalStyle />
             <Helmet>
                 <title>Sidebar</title>
-        </Helmet>
+            </Helmet>
         <>
           <Layout>
-                <h1>Test</h1>
+            <Roteator />
           </Layout>
         </>
       </ThemeProvider>
