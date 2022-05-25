@@ -73,6 +73,8 @@ export const SLinkContainer = styled.div`
     background: #111435e8;
     color: #fff;
     margin-top: 12px;
+    padding: 5px;
+    
 
   border-radius: ${v.borderRadius};
   margin: 8px 0;
