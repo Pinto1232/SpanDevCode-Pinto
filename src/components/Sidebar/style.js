@@ -70,14 +70,18 @@ export const SDivider = styled.div`
 `
 
 export const SLinkContainer = styled.div`
-  background: transparent;
+    background: #111435e8;
+    color: #fff;
+    margin-top: 12px;
+
   border-radius: ${v.borderRadius};
   margin: 8px 0;
   cursor: pointer;
   margin: 5px;
 
   :hover { 
-    box-shadow: inset 0 0 0 1px ${({theme}) => theme.bg3};
+    box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
+    background: transparent;
   }
 
 `
