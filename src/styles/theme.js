@@ -1,5 +1,5 @@
 export const lightTheme = {
-    bg: "rgb(255,255,255)",
+    bg: "linear-gradient( -20deg,#e46d25,#e46d25,#e46d25,#e46d25,#ef5b30,#ef4b2f ); background-position: 0 0; animation: Gradient 15s;",
     bgAlpha: "rgb(255,255,255, .3)",
     bg2: "rgb(245, 245, 245)",
     bg3: "rgb(230,230, 230)",

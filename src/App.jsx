@@ -19,7 +19,7 @@ const App = () =>
       <ThemeProvider theme={themeStyle}>
           <GlobalStyle />
             <Helmet>
-                <title>Sidebar</title>
+                <h3>Sidebar</h3>
             </Helmet>
         <>
           <Layout>
