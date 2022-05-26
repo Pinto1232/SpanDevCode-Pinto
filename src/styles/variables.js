@@ -9,6 +9,9 @@ export const v = {
     xxlSpacing: `48px`,
   borderRadius: `6px`,
   mrTop: `10px`,
+  mrLeft: `10px`,
+  mrRight: `10px`,
+  mrBottom: `50px;`
 };
 
 export const btnReset = css`

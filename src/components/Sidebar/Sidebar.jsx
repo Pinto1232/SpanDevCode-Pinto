@@ -1,8 +1,38 @@
 import React from 'react'
-import { SSidebar, SLogo, SSearch, SSearchIcon, SDivider, SLinkContainer, SLink, SLinkIcon, SlinkLabel, SLinkNotification } from '../Sidebar/style'
+import
+  {
+    SSidebar,
+    SLogo,
+    SSearch,
+    SSearchIcon,
+    SDivider,
+    SLinkContainer,
+    SLink,
+    SLinkIcon,
+    SlinkLabel,
+    SLinkNotification,
+    SLogOut,
+    STheme,
+    STemeLabel,
+    SThemeToggler,
+    SToggleThumbnail,
+    
+  } from '../Sidebar/style'
 import { logoSVG } from '../../assets'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { FaPlay, FaKeybase, FaGitter,FaLaughSquint, FaSwatchbook,FaSatellite, FaVrCardboard, FaAngleLeft } from 'react-icons/fa';
+import
+  {
+    FaPlay,
+    FaKeybase,
+    FaGitter,
+    FaLaughSquint,
+    FaSwatchbook,
+    FaSatellite,
+    FaVrCardboard,
+    FaTv,
+    FaCogs,
+    FaCircleNotch
+  } from 'react-icons/fa';
 
 
 
@@ -21,13 +51,31 @@ const Sidebar = () => {
       {/* <SDivider /> */}
       {linkArray.map(({label, icon, notification, to}) => (
       <SLinkContainer key={label}>
-        <SLink to={to}>
-            <SLinkNotification>{ notification}</SLinkNotification>
-            <SlinkLabel>{ label}</SlinkLabel>
+          <SLink to={to}>
+            {!!notification && (
+              <SLinkNotification>{ notification}</SLinkNotification>
+            )}
+            <SlinkLabel>{label}</SlinkLabel>
             <SLinkIcon>{icon}</SLinkIcon>
         </SLink>
-      </SLinkContainer>
+        </SLinkContainer>
       ))}
+
+      {/*  <SDivider /> */}
+      {linkArray2.map(({label, icon, to}) => (
+        <SLogOut key={label}>
+          <SLink to="/">
+            <SlinkLabel>{label}</SlinkLabel>
+            <SLinkIcon>{icon}</SLinkIcon>
+          </SLink>
+        </SLogOut>
+      ))}
+      <STheme>
+        <STemeLabel>Dark mode</STemeLabel>
+        <SThemeToggler>
+          <SToggleThumbnail/>
+        </SThemeToggler>
+      </STheme>
     </SSidebar>
   )
 }
@@ -45,33 +93,33 @@ const linkArray = [
     label: 'Cartooning',
     icon: <FaKeybase />, 
     to: '/cartooning',
-    notification: 2,
+    notification:0,
   },
     
       {
     label: 'Character Design',
     icon: <FaGitter />, 
     to: '/chardesing',
-    notification: 4,
+    notification:0,
   },
       
         {
     label: 'Comedy',
     icon: <FaLaughSquint />, 
     to: '/comedy',
-    notification: 2,
+    notification:0,
   },
         
   {
     label: 'Design',
     icon: <FaSwatchbook />, 
     to: '/desing',
-    notification: 23,
+    notification: 0,
   },
           
   {
     label: 'DJing',
-    icon: <FaAngleLeft />, 
+    icon: <FaTv/>, 
     to: '/djing',
     notification: 0,
   },
@@ -80,7 +128,7 @@ const linkArray = [
     label: 'Engineering',
     icon: <FaSatellite />, 
     to: '/engineering',
-    notification: 10,
+    notification: 0,
   },
               
   {
@@ -89,6 +137,22 @@ const linkArray = [
     to: '/gamedesign',
     notification: 0,
   }
+
 ];
+
+
+const linkArray2 = [
+  {
+    label: 'Settings',
+    icon: <FaCogs />,
+    to: '/settings',
+  },
+
+  {
+    label: 'Logout',
+    icon: <FaCircleNotch />,
+    to: '/logout',
+  }
+]
 
 export default Sidebar

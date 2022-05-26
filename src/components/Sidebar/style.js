@@ -63,18 +63,21 @@ export const SSearchIcon = styled.button`
 
 export const SDivider = styled.div`
   height: 1px;
-  width: 100%;
+  max-width: 100%;
 
-  background: ${({ theme }) => theme.bg3};
-  margin: ${v.lgSpacing} 0;
+  background: ${({ theme }) => theme.bg4};
+  margin: ${v.mdSpacing} 0;
+  margin-left: ${v.mrLeft};
+  margin-right: ${v.mrRight};
+  margin-bottom: ${v.mrBottom};
 `
 
 export const SLinkContainer = styled.div`
-    background: #111435e8;
+    background: transparent;
     color: #fff;
     margin-top: 12px;
     padding: 5px;
-    
+ 
 
   border-radius: ${v.borderRadius};
   margin: 8px 0;
@@ -120,4 +123,54 @@ export const SLinkNotification = styled.div`
   color: white;
 
   margin-right: ${v.mdSpacing};
+`
+
+export const SLogOut = styled.div`
+   background: #111435e8;
+    color: #fff;
+    margin-top: 12px;
+    padding: 5px;
+    max-width: 100%;
+ 
+  
+ 
+
+  border-radius: ${v.borderRadius};
+  cursor: pointer;
+  margin: 5px;
+
+  :hover { 
+    box-shadow: inset 0 0 0 1px ${({ theme }) => theme.bg3};
+    background: transparent;
+  }
+` 
+
+export const STheme = styled.div`
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 5px;
+`
+
+export const STemeLabel = styled.span`
+  display: block;
+  flex: 1;
+  font-weight: bold;
+`
+
+export const SThemeToggler = styled.button`
+   ${btnReset}; 
+   margin: 0 auto;
+   cursonr: pointer;
+   width: 36px;
+   height: 20px;
+   border-radius: 10px;
+   background: ${({ theme }) => theme.bg3};
+   
+   position: relative;
+`
+
+export const SToggleThumbnail = styled.div `
+
+
 `
