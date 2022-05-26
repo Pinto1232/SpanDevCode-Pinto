@@ -159,18 +159,26 @@ export const STemeLabel = styled.span`
 `
 
 export const SThemeToggler = styled.button`
-   ${btnReset}; 
+   ${btnReset};
+   margin-top: ${v.mrTop}
    margin: 0 auto;
    cursonr: pointer;
    width: 36px;
    height: 20px;
    border-radius: 10px;
-   background: ${({ theme }) => theme.bg3};
+   background: ${({ theme, isActive }) => !isActive ? theme.bg3 : theme.primary};
    
    position: relative;
 `
 
 export const SToggleThumbnail = styled.div `
-
-
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  transition: .2s ease right;
+  right: calc(100% - 18px -1px);
+  border-radius: 50%;
+  background: ${({ theme }) => theme.bg};
 `

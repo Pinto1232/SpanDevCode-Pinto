@@ -1,4 +1,4 @@
-import React from 'react'
+import React,  {useContext} from 'react'
 import
   {
     SSidebar,
@@ -33,10 +33,14 @@ import
     FaCogs,
     FaCircleNotch
   } from 'react-icons/fa';
+/* import { useContext } from 'react/cjs/react.production.min'; */
+import { ThemeContext} from './../../App'
 
 
 
-const Sidebar = () => {
+const Sidebar = () =>{
+  const {theme, setTheme} =  useContext(ThemeContext)
+
   return (
     <SSidebar>
       <SLogo>
@@ -70,10 +74,13 @@ const Sidebar = () => {
           </SLink>
         </SLogOut>
       ))}
+
+      
+      {/** Dark mode feature */}
       <STheme>
         <STemeLabel>Dark mode</STemeLabel>
-        <SThemeToggler>
-          <SToggleThumbnail/>
+        <SThemeToggler isActive={theme === 'dark'} onClick={() => setTheme((p) => (p  === 'light' ? 'dark' : 'light'))}>
+          <SToggleThumbnail  style={theme === 'dark' ? {right: "1px"} : {} }/>
         </SThemeToggler>
       </STheme>
     </SSidebar>
