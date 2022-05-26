@@ -91,7 +91,7 @@ export const SLinkContainer = styled.div`
 
 `
 
-export const SLink = styled.div`
+export const SLink = styled(Link)`
     display: flex;
     aligh-items: center;
     text-decoration: none;
@@ -150,6 +150,7 @@ export const STheme = styled.div`
     align-items: center;
     font-size: 16px;
     margin: 10px;
+    margin-bottom: ${v.mrBottom};
 `
 
 export const STemeLabel = styled.span`
@@ -181,4 +182,23 @@ export const SToggleThumbnail = styled.div `
   right: calc(100% - 18px -1px);
   border-radius: 50%;
   background: ${({ theme }) => theme.bg};
+`
+
+export const SSidebarButton = styled.button`
+  ${btnReset};
+  /*position: absolute; */
+  top: ${v.xxlSpacing};
+  right: ${({ isOpen }) => (isOpen ? `-16px` : `-40px`)};
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.bg3};
+  box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 6px;
+
+  transform: ${({ isOpen }) => !isOpen ? ` rotate(180deg)` : `initial`};
 `

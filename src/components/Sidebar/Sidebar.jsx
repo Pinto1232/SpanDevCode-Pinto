@@ -1,4 +1,4 @@
-import React,  {useContext} from 'react'
+import React,  {useContext, useState} from 'react'
 import
   {
     SSidebar,
@@ -16,10 +16,10 @@ import
     STemeLabel,
     SThemeToggler,
     SToggleThumbnail,
-    
+    SSidebarButton,
   } from '../Sidebar/style'
 import { logoSVG } from '../../assets'
-import { AiOutlineSearch } from 'react-icons/ai'
+
 import
   {
     FaPlay,
@@ -31,23 +31,31 @@ import
     FaVrCardboard,
     FaTv,
     FaCogs,
-    FaCircleNotch
+    FaPowerOff,
+    FaSearch,
+    FaChevronCircleLeft,
+    FaHouseUser,
   } from 'react-icons/fa';
-/* import { useContext } from 'react/cjs/react.production.min'; */
 import { ThemeContext} from './../../App'
 
 
 
 const Sidebar = () =>{
-  const {theme, setTheme} =  useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext)
+  const {sidebarOpen, setSidebarOpen} = useState(false)
 
   return (
     <SSidebar>
+      <>
+        <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p )}>
+           <FaChevronCircleLeft />
+         </SSidebarButton>
+      </>
+
       <SLogo>
         <img src={logoSVG} alt="logo" />
       </SLogo>
       
-          
       {/** Dark mode feature */}
       <STheme>
         <STemeLabel></STemeLabel>
@@ -58,29 +66,32 @@ const Sidebar = () =>{
 
       <SSearch>
         <SSearchIcon> 
-          <AiOutlineSearch />
+          <FaSearch />
         </SSearchIcon>
          <input placeholder="Search" />
       </SSearch>
+
+
       {/* <SDivider /> */}
+      
       {linkArray.map(({label, icon, notification, to}) => (
       <SLinkContainer key={label}>
           <SLink to={to}>
             {!!notification && (
               <SLinkNotification>{ notification}</SLinkNotification>
             )}
+             <SLinkIcon>{icon}</SLinkIcon>
             <SlinkLabel>{label}</SlinkLabel>
-            <SLinkIcon>{icon}</SLinkIcon>
         </SLink>
         </SLinkContainer>
       ))}
 
-      {/*  <SDivider /> */}
+      <SDivider /> 
       {linkArray2.map(({label, icon, to}) => (
         <SLogOut key={label}>
           <SLink to="/">
-            <SlinkLabel>{label}</SlinkLabel>
             <SLinkIcon>{icon}</SLinkIcon>
+            <SlinkLabel>{label}</SlinkLabel>
           </SLink>
         </SLogOut>
       ))}
@@ -90,6 +101,13 @@ const Sidebar = () =>{
 
 
 const linkArray = [
+    {
+    label: 'Home',
+    icon: <FaHouseUser />, 
+    to: '/',
+  },
+
+
   {
     label: 'Animation',
     icon: <FaPlay />, 
@@ -100,7 +118,7 @@ const linkArray = [
     {
     label: 'Cartooning',
     icon: <FaKeybase />, 
-    to: '/cartooning',
+    to: '/cartoon',
     notification:0,
   },
     
@@ -158,7 +176,7 @@ const linkArray2 = [
 
   {
     label: 'Logout',
-    icon: <FaCircleNotch />,
+    icon: <FaPowerOff />,
     to: '/logout',
   }
 ]
