@@ -46,6 +46,16 @@ const Sidebar = () =>{
       <SLogo>
         <img src={logoSVG} alt="logo" />
       </SLogo>
+      
+          
+      {/** Dark mode feature */}
+      <STheme>
+        <STemeLabel></STemeLabel>
+        <SThemeToggler isActive={theme === 'dark'} onClick={() => setTheme((p) => (p  === 'light' ? 'dark' : 'light'))}>
+          <SToggleThumbnail  style={theme === 'dark' ? {right: "1px"} : {} }/>
+        </SThemeToggler>
+      </STheme>
+
       <SSearch>
         <SSearchIcon> 
           <AiOutlineSearch />
@@ -74,15 +84,6 @@ const Sidebar = () =>{
           </SLink>
         </SLogOut>
       ))}
-
-      
-      {/** Dark mode feature */}
-      <STheme>
-        <STemeLabel>Dark mode</STemeLabel>
-        <SThemeToggler isActive={theme === 'dark'} onClick={() => setTheme((p) => (p  === 'light' ? 'dark' : 'light'))}>
-          <SToggleThumbnail  style={theme === 'dark' ? {right: "1px"} : {} }/>
-        </SThemeToggler>
-      </STheme>
     </SSidebar>
   )
 }

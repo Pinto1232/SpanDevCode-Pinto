@@ -149,7 +149,7 @@ export const STheme = styled.div`
     display: flex;
     align-items: center;
     font-size: 16px;
-    margin: 5px;
+    margin: 10px;
 `
 
 export const STemeLabel = styled.span`
