@@ -46,15 +46,15 @@ const Sidebar = () =>{
 
   return (
     <SSidebar>
-      <>
-        <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p )}>
-           <FaChevronCircleLeft />
-         </SSidebarButton>
-      </>
-
       <SLogo>
         <img src={logoSVG} alt="logo" />
       </SLogo>
+
+     
+      <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p )}>
+           <FaChevronCircleLeft />
+      </SSidebarButton>
+      
       
       {/** Dark mode feature */}
       <STheme>

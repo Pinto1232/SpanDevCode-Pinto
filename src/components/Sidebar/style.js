@@ -12,6 +12,11 @@ export const SSidebar = styled.div`
 
 
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    height: 100vh;
+  }
 `
 
 export const SLogo = styled.div`
@@ -198,7 +203,8 @@ export const SSidebarButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin: 6px;
+  margin-top: 10px;
+
 
   transform: ${({ isOpen }) => !isOpen ? ` rotate(180deg)` : `initial`};
 `
