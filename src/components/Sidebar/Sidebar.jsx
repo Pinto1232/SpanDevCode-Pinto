@@ -89,7 +89,7 @@ const Sidebar = () =>{
       <SDivider /> 
       {linkArray2.map(({label, icon, to}) => (
         <SLogOut key={label}>
-          <SLink to="/">
+          <SLink to={to}>
             <SLinkIcon>{icon}</SLinkIcon>
             <SlinkLabel>{label}</SlinkLabel>
           </SLink>
@@ -125,7 +125,7 @@ const linkArray = [
       {
     label: 'Character Design',
     icon: <FaGitter />, 
-    to: '/chardesing',
+    to: '/chardesign',
     notification:0,
   },
       
@@ -139,7 +139,7 @@ const linkArray = [
   {
     label: 'Design',
     icon: <FaSwatchbook />, 
-    to: '/desing',
+    to: '/design',
     notification: 0,
   },
           
@@ -177,7 +177,7 @@ const linkArray2 = [
   {
     label: 'Logout',
     icon: <FaPowerOff />,
-    to: '/logout',
+    to: '/',
   }
 ]
 
