@@ -2,7 +2,7 @@ import React from 'react'
 import { SSidebar, SLogo, SSearch, SSearchIcon, SDivider, SLinkContainer, SLink, SLinkIcon, SlinkLabel, SLinkNotification } from '../Sidebar/style'
 import { logoSVG } from '../../assets'
 import { AiOutlineSearch } from 'react-icons/ai'
-import { FaAngleLeft } from 'react-icons/fa';
+import { FaPlay, FaKeybase, FaGitter,FaLaughSquint, FaSwatchbook,FaSatellite, FaVrCardboard, FaAngleLeft } from 'react-icons/fa';
 
 
 
@@ -19,14 +19,15 @@ const Sidebar = () => {
          <input placeholder="Search" />
       </SSearch>
       {/* <SDivider /> */}
-
-      <SLinkContainer>
-        <SLink>
-          <SLinkIcon></SLinkIcon>
-          <SlinkLabel>Animation</SlinkLabel>
-          <SLinkNotification><FaAngleLeft/></SLinkNotification>
+      {linkArray.map(({label, icon, notification, to}) => (
+      <SLinkContainer key={label}>
+        <SLink to={to}>
+            <SLinkNotification>{ notification}</SLinkNotification>
+            <SlinkLabel>{ label}</SlinkLabel>
+            <SLinkIcon>{icon}</SLinkIcon>
         </SLink>
       </SLinkContainer>
+      ))}
     </SSidebar>
   )
 }
@@ -35,50 +36,58 @@ const Sidebar = () => {
 const linkArray = [
   {
     label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+    icon: <FaPlay />, 
+    to: '/animation',
+    notification: 0,
   },
 
     {
-    label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+    label: 'Cartooning',
+    icon: <FaKeybase />, 
+    to: '/cartooning',
+    notification: 2,
   },
     
       {
-    label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+    label: 'Character Design',
+    icon: <FaGitter />, 
+    to: '/chardesing',
+    notification: 4,
   },
       
         {
-    label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+    label: 'Comedy',
+    icon: <FaLaughSquint />, 
+    to: '/comedy',
+    notification: 2,
   },
         
-          {
-    label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+  {
+    label: 'Design',
+    icon: <FaSwatchbook />, 
+    to: '/desing',
+    notification: 23,
   },
           
   {
-    label: 'Animation',
+    label: 'DJing',
     icon: <FaAngleLeft />, 
-    to: '/'
+    to: '/djing',
+    notification: 0,
   },
             
   {
-    label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+    label: 'Engineering',
+    icon: <FaSatellite />, 
+    to: '/engineering',
+    notification: 10,
   },
               
   {
-    label: 'Animation',
-    icon: <FaAngleLeft />, 
-    to: '/'
+    label: 'Game Design',
+    icon: <FaVrCardboard />, 
+    to: '/gamedesign',
+    notification: 0,
   }
 ];
 
