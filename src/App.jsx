@@ -7,12 +7,12 @@ import Layout from './components/Layout/Layout'
 import Roteator from './Roteator'
 
 
-export const ThemeContext = React.createContext(null)
+export const ThemeContext = React.createContext(true)
 
 const App = () =>
 {
-  const [theme, setTheme] = useState('light')
-  const themeStyle = theme === 'light' ? lightTheme : darkTheme;
+  const [theme, setTheme] = useState("light")
+  const themeStyle = theme === "light" ? lightTheme : darkTheme;
   
   return (
     <ThemeContext.Provider value={{setTheme, theme}}>

@@ -42,7 +42,7 @@ import { ThemeContext} from './../../App'
 
 const Sidebar = () =>{
   const { theme, setTheme } = useContext(ThemeContext)
-  const {sidebarOpen, setSidebarOpen} = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <SSidebar>
@@ -50,11 +50,9 @@ const Sidebar = () =>{
         <img src={logoSVG} alt="logo" />
       </SLogo>
 
-     
-      <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p )}>
-           <FaChevronCircleLeft />
+      <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)}>
+         <FaChevronCircleLeft />
       </SSidebarButton>
-      
       
       {/** Dark mode feature */}
       <STheme>

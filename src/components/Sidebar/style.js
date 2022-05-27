@@ -19,6 +19,25 @@ export const SSidebar = styled.div`
   }
 `
 
+export const SSidebarButton = styled.button`
+  ${btnReset};
+  /* position: absolute; */
+  top: ${v.xxlSpacing};
+  right: ${({ isOpen}) => isOpen ? `-16px` : `-40px`};
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.bg3};
+  box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg3};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transform: ${({ isOpen }) => (!isOpen ? `rotate(180deg)` : `initial`)};
+`
+
+
 export const SLogo = styled.div`
    width: 50%;
 
@@ -31,6 +50,9 @@ export const SLogo = styled.div`
 
    marrgin-bottom: ${v.lgSpacing};
 `
+
+
+
 
 
 export const SSearch = styled.div`
@@ -161,7 +183,6 @@ export const STheme = styled.div`
 export const STemeLabel = styled.span`
   display: block;
   flex: 1;
-  font-weight: bold;
 `
 
 export const SThemeToggler = styled.button`
@@ -172,7 +193,7 @@ export const SThemeToggler = styled.button`
    width: 36px;
    height: 20px;
    border-radius: 10px;
-   background: ${({ theme, isActive }) => !isActive ? theme.bg3 : theme.primary};
+   background: ${({ theme, isActive }) => (!isActive ? theme.bg3 : theme.primary)};
    
    position: relative;
 `
@@ -189,22 +210,7 @@ export const SToggleThumbnail = styled.div `
   background: ${({ theme }) => theme.bg};
 `
 
-export const SSidebarButton = styled.button`
-  ${btnReset};
-  /*position: absolute; */
-  top: ${v.xxlSpacing};
-  right: ${({ isOpen }) => (isOpen ? `-16px` : `-40px`)};
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.bg3};
-  box-shadow: 0 0 4px ${({ theme }) => theme.bg3}, 0 0 7px ${({ theme }) => theme.bg};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  margin-top: 10px;
-
-
-  transform: ${({ isOpen }) => !isOpen ? ` rotate(180deg)` : `initial`};
+export const SHeading = styled.div`
+  font-weight: bold;
+  font-size: 18px;
 `
