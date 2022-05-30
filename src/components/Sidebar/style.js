@@ -5,23 +5,18 @@ import { btnReset, v } from '../../styles/variables'
 
 
 export const SSidebar = styled.div`
-  width: ${v.sidebarWidth};
+  width: ${({ isOpen }) => (!isOpen ? `auto` : v.sidebarWidth)};
   background: ${({ theme }) => theme.bg};
   height: 100vh;
   padding: ${v.lgSpacing}
 
 
   position: relative;
-
-  @media (max-width: 768px) {
-    flex-direction: row;
-    height: 100vh;
-  }
 `
 
 export const SSidebarButton = styled.button`
   ${btnReset};
-  /* position: absolute; */
+  position: relative; 
   top: ${v.xxlSpacing};
   right: ${({ isOpen}) => isOpen ? `-16px` : `-40px`};
   width: 32px;
@@ -39,7 +34,7 @@ export const SSidebarButton = styled.button`
 
 
 export const SLogo = styled.div`
-   width: 50%;
+   max-width: 100%;
 
    img{
        max-width: 100%;
@@ -81,6 +76,7 @@ export const SSearchIcon = styled.button`
   padding: calc(${v.mdSpacing} - 2px) ${v.mdSpacing};
   display: flex;
   cursor: pointer;
+  color: #fff;
  
 
   png{
@@ -214,3 +210,33 @@ export const SHeading = styled.div`
   font-weight: bold;
   font-size: 18px;
 `
+
+
+
+/* Home Page */
+
+export const SContainer = styled.div`
+ background-color: black;
+width:100%;
+ height: 100vh;
+`
+
+
+
+
+export const HeadingHome = styled.div`
+
+
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+
+     
+`
+
+export const LogoHome = styled.div``
+
+export const MenuHome = styled.div``
+export const Content = styled.div``
+export const SHeader = styled.div``
+export const SParagraph = styled.div``

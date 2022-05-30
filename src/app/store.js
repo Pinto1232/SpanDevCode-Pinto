@@ -1,10 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { SpanApi } from '../services/SpanApi'
+import { configureStore } from '@reduxjs/toolkit';
+import { SpanApi } from '../services/SpanApi';
 
 
-export default configureStore({
+export default configureStore({ 
     reducer: {
-        // reducer
         [SpanApi.reducerPath]: SpanApi.reducer,
-    }, 
+    }
 })

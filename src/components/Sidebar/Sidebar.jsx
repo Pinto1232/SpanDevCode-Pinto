@@ -35,7 +35,8 @@ import
     FaSearch,
     FaChevronCircleLeft,
     FaHouseUser,
-  } from 'react-icons/fa';
+} from 'react-icons/fa';
+  
 import { ThemeContext} from './../../App'
 
 
@@ -45,54 +46,62 @@ const Sidebar = () =>{
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <SSidebar>
+    <SSidebar isOpen={sidebarOpen} >
       <SLogo>
-        <img src={logoSVG} alt="logo" />
+        {/*  <img src={logoSVG} alt="logo" /> */}
       </SLogo>
 
       <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)}>
          <FaChevronCircleLeft />
       </SSidebarButton>
-      
-      {/** Dark mode feature */}
-      <STheme>
-        <STemeLabel></STemeLabel>
-        <SThemeToggler isActive={theme === 'dark'} onClick={() => setTheme((p) => (p  === 'light' ? 'dark' : 'light'))}>
-          <SToggleThumbnail  style={theme === 'dark' ? {right: "1px"} : {} }/>
-        </SThemeToggler>
-      </STheme>
+   
 
-      <SSearch>
+      <SSearch style={!sidebarOpen ? {width: `fit-content`} : {}}>
         <SSearchIcon> 
           <FaSearch />
         </SSearchIcon>
-         <input placeholder="Search" />
+         <input placeholder="Search" style={!sidebarOpen ? {width: 0, padding: 0} : {}}/>
       </SSearch>
 
 
       {/* <SDivider /> */}
       
       {linkArray.map(({label, icon, notification, to}) => (
-      <SLinkContainer key={label}>
-          <SLink to={to}>
-            {!!notification && (
-              <SLinkNotification>{ notification}</SLinkNotification>
-            )}
-             <SLinkIcon>{icon}</SLinkIcon>
-            <SlinkLabel>{label}</SlinkLabel>
+      <SLinkContainer key={label} style={!sidebarOpen ? { width: `fit-content` } : {}}>
+          <SLink to={to} style={!sidebarOpen ? { width: `fit-content` } : {}}>
+            <SLinkIcon>{icon}</SLinkIcon>
+            {sidebarOpen && (
+              <>
+                <SlinkLabel>{label}</SlinkLabel>
+                {!!notification && (
+                <SLinkNotification>{ notification}</SLinkNotification>
+              )}
+              </>
+            )}       
         </SLink>
         </SLinkContainer>
       ))}
 
       <SDivider /> 
       {linkArray2.map(({label, icon, to}) => (
-        <SLogOut key={label}>
-          <SLink to={to}>
+        <SLogOut key={label} style={!sidebarOpen ? { width: `fit-content` } : {}}>
+          <SLink to={to}  style={!sidebarOpen ? { width: `fit-content` } : {}}>
             <SLinkIcon>{icon}</SLinkIcon>
-            <SlinkLabel>{label}</SlinkLabel>
+            {sidebarOpen && (
+              <SlinkLabel>{label}</SlinkLabel>
+            )}
           </SLink>
         </SLogOut>
       ))}
+
+         
+      {/** Dark mode feature */}
+      <STheme>
+        {sidebarOpen && <STemeLabel style={{color: "#fff"}}></STemeLabel>}
+        <SThemeToggler isActive={theme === 'dark'} onClick={() => setTheme((p) => (p  === 'light' ? 'dark' : 'light'))}>
+          <SToggleThumbnail  style={theme === 'dark' ? {right: "1px"} : {} }/>
+        </SThemeToggler>
+      </STheme>
     </SSidebar>
   )
 }

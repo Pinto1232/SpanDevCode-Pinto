@@ -6,7 +6,7 @@ export const v = {
     mdSpacing: `16px`,
     lgSpacing: `24px`,
     xlSpacing: `32px`,
-    xxlSpacing: `48px`,
+   xxlSpacing: `48px`,
   borderRadius: `6px`,
   mrTop: `10px`,
   mrLeft: `10px`,
