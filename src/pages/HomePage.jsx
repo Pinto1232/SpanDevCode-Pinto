@@ -24,7 +24,7 @@ const HomePage = () => {
       <SMainSection>
         <SSection>
           <SHeader>See what's next.</SHeader>
-          <SParagraph>Watch Anywhere. Cancel Anytime</SParagraph>
+          <SParagraph>Browse Anywhere. Cancel Anytime</SParagraph>
           <SButton>Join Free For a Month</SButton>
         </SSection>
         <SSection></SSection>
