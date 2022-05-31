@@ -1,26 +1,26 @@
 import React from 'react'
 import { SContainer, HeadingHome, LogoHome, MenuHome, Content, SHeader, SParagraph } from '../components/Sidebar/style'
-import { useGetPhotosQuery } from '../services/SpanApi'
-
+import { useGetTopicsQuery, } from '../services/SpanApi'
+import { bannerSVG } from './../assets'
 
 const HomePage = () => {
-  const { data, isFetching } = useGetPhotosQuery();
+  const { data, isLoading, error, isError } = useGetTopicsQuery(); 
 
-  console.log(data);
+  console.log("Topics", data); 
   
 
   return (
-     <SContainer  className="container_back">
-            <HeadingHome>
-                <LogoHome>
-                  Span
-                </LogoHome>
-                <MenuHome>Menu</MenuHome>
+    <SContainer className="container_back" style={{
+      backgroundImage: `url(${bannerSVG}) , linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))`,
+      backgroundRepeat: 'no-repeat', 
+      backgroundSize: 'cover',
+       content: ""
+    }}>
+        <HeadingHome>
+                <LogoHome className="menu">Span Digital</LogoHome>
+                <MenuHome className="menu">Menu</MenuHome>
         </HeadingHome> 
-        <Content>
-           <SHeader>Welcome to our portal</SHeader>
-          <SParagraph>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem labore voluptatum!</SParagraph>
-        </Content>
+        
      </SContainer>
   )
 }

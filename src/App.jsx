@@ -7,7 +7,7 @@ import Layout from './components/Layout/Layout'
 import Roteator from './Roteator'
 
 
-export const ThemeContext = React.createContext(true)
+export const ThemeContext = React.createContext(null)
 
 const App = () =>
 {

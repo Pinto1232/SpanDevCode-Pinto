@@ -14,12 +14,15 @@ export const SpanApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl }),
     
     endpoints: (builder) => ({ 
+        getTopics: builder.query({
+            query: () => createRequest('topics/?client_id=1yyEN8iqlLMqHhdKEXQhziAhl-lKwbNw6wti9niIlhg')
+        }),
         getPhotos: builder.query({
-            query: () => createRequest('topics/?client_id=1yyEN8iqlLMqHhdKEXQhziAhl-lKwbNw6wti9niIlhg ')
+            query: () => createRequest('photos/?client_id=1yyEN8iqlLMqHhdKEXQhziAhl-lKwbNw6wti9niIlhg')
         })
     })
 });
 
 export const {
-    useGetPhotosQuery,
+    useGetTopicsQuery, useGetPhotosQuery,
 } = SpanApi;

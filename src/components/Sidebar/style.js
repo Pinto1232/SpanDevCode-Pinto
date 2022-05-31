@@ -216,27 +216,41 @@ export const SHeading = styled.div`
 /* Home Page */
 
 export const SContainer = styled.div`
- background-color: black;
-width:100%;
- height: 100vh;
+  height: 100vh;
+  background-blend-mode: overlay;
 `
 
-
-
-
 export const HeadingHome = styled.div`
-
-
      display:flex;
      align-items: center;
      justify-content: space-between;
 
-     
+     & .menu{
+       margin: 1em;
+     }
 `
 
-export const LogoHome = styled.div``
+export const LogoHome = styled.div`
+    font-size: 48px;
+    color: #e86729;
+    font-weight: 600;
+    margin-left: 12px;
 
-export const MenuHome = styled.div``
+`
+
+export const MenuHome = styled.div`
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+
+    background: #e86729;
+    display: inline-block;
+    padding: 10px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+
+    margin-right: 12px;
+`
 export const Content = styled.div``
 export const SHeader = styled.div``
 export const SParagraph = styled.div``
