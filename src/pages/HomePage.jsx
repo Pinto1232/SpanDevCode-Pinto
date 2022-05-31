@@ -1,5 +1,5 @@
 import React from 'react'
-import { SContainer, HeadingHome, LogoHome, MenuHome, Content, SHeader, SParagraph } from '../components/Sidebar/style'
+import { SContainer, HeadingHome, LogoHome, MenuHome, SMainSection, SSection, SHeader, SParagraph, SButton } from '../components/Sidebar/style'
 import { useGetTopicsQuery, } from '../services/SpanApi'
 import { bannerSVG } from './../assets'
 
@@ -19,7 +19,16 @@ const HomePage = () => {
         <HeadingHome>
                 <LogoHome className="menu">Span Digital</LogoHome>
                 <MenuHome className="menu">Menu</MenuHome>
-        </HeadingHome> 
+      </HeadingHome> 
+      
+      <SMainSection>
+        <SSection>
+          <SHeader>See what's next.</SHeader>
+          <SParagraph>Watch Anywhere. Cancel Anytime</SParagraph>
+          <SButton>Join Free For a Month</SButton>
+        </SSection>
+        <SSection></SSection>
+      </SMainSection>
         
      </SContainer>
   )

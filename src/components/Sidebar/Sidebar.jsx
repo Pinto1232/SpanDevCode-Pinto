@@ -18,7 +18,7 @@ import
     SToggleThumbnail,
     SSidebarButton,
   } from '../Sidebar/style'
-import { logoSVG } from '../../assets'
+
 
 import
   {
@@ -35,6 +35,7 @@ import
     FaSearch,
     FaChevronCircleLeft,
     FaHouseUser,
+    FaCloudSun,
 } from 'react-icons/fa';
   
 import { ThemeContext} from './../../App'
@@ -47,10 +48,6 @@ const Sidebar = () =>{
 
   return (
     <SSidebar isOpen={sidebarOpen} >
-      <SLogo>
-        {/*  <img src={logoSVG} alt="logo" /> */}
-      </SLogo>
-
       <SSidebarButton isOpen={sidebarOpen} onClick={() => setSidebarOpen((p) => !p)}>
          <FaChevronCircleLeft />
       </SSidebarButton>
@@ -97,7 +94,7 @@ const Sidebar = () =>{
          
       {/** Dark mode feature */}
       <STheme>
-        {sidebarOpen && <STemeLabel style={{color: "#fff"}}></STemeLabel>}
+        {sidebarOpen && <STemeLabel style={{color: "#fff"}}><FaCloudSun/>   Dark mode</STemeLabel>}
         <SThemeToggler isActive={theme === 'dark'} onClick={() => setTheme((p) => (p  === 'light' ? 'dark' : 'light'))}>
           <SToggleThumbnail  style={theme === 'dark' ? {right: "1px"} : {} }/>
         </SThemeToggler>

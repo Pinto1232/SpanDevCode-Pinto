@@ -236,12 +236,15 @@ export const LogoHome = styled.div`
     font-weight: 600;
     margin-left: 12px;
 
+    font-weight: bold;
+
 `
 
 export const MenuHome = styled.div`
     font-size: 18px;
     color: #fff;
     cursor: pointer;
+    text-transform: lowercase;
 
     background: #e86729;
     display: inline-block;
@@ -251,6 +254,48 @@ export const MenuHome = styled.div`
 
     margin-right: 12px;
 `
-export const Content = styled.div``
-export const SHeader = styled.div``
-export const SParagraph = styled.div``
+
+export const SMainSection = styled.div`
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+  margin: 1em;
+  margin-top:4em;
+
+ font-size: 40px;
+ color: #fff;
+
+
+ `
+export const SSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-wrap: wrap;
+`
+export const SHeader = styled.div`
+  font-size: 2em;
+  font-weight: bold;
+`
+export const SParagraph = styled.div`
+  text-transform: uppercase;
+  font-size: 27px;
+
+  margin-top: 10px;
+`
+export const SButton = styled.div`
+   background: #e86729;
+   padding-top: 5px;
+   padding-bottom: 10px;
+   display: inline-block;
+   max-width: 16em;
+
+   text-align: center;
+   margin-top: 1em;
+   font-size: 19px;
+   cursor: pointer;
+
+   text-transform: uppercase;
+   
+`
+
