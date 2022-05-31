@@ -1,13 +1,14 @@
 import React from 'react'
 import { SContainer, HeadingHome, LogoHome, MenuHome, SMainSection, SSection, SHeader, SParagraph, SButton } from '../components/Sidebar/style'
-import { useGetTopicsQuery, } from '../services/SpanApi'
+import { useGetTopicsQuery } from '../services/SpanApi'
 import { bannerSVG,  logoSVG} from './../assets'
 
 const HomePage = () => {
   const { data, isLoading, error, isError } = useGetTopicsQuery(); 
+  
 
   console.log("Topics", data); 
-  
+
 
   return (
     <SContainer className="container_back" style={{

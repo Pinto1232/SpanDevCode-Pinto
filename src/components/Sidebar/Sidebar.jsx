@@ -113,58 +113,72 @@ const linkArray = [
 
 
   {
-    label: 'Animation',
+    label: 'Digital Nomad',
     icon: <FaPlay />, 
-    to: '/animation',
+    to: '/digital-nomad',
     notification: 0,
   },
 
     {
-    label: 'Cartooning',
+    label: 'Current Events',
     icon: <FaKeybase />, 
-    to: '/cartoon',
+    to: '/current-events',
     notification:0,
   },
     
       {
-    label: 'Character Design',
+    label: 'Wallpapers',
     icon: <FaGitter />, 
-    to: '/chardesign',
+    to: '/wallpapers',
     notification:0,
   },
       
         {
-    label: 'Comedy',
+    label: '3D Renders',
     icon: <FaLaughSquint />, 
-    to: '/comedy',
+    to: '/3d-renders',
     notification:0,
   },
         
   {
-    label: 'Design',
+    label: 'Textures & Patterns',
     icon: <FaSwatchbook />, 
-    to: '/design',
+    to: '/textures-patterns',
     notification: 0,
   },
           
   {
-    label: 'DJing',
+    label: 'Experimental',
     icon: <FaTv/>, 
-    to: '/djing',
+    to: '/experimental',
     notification: 0,
   },
             
   {
-    label: 'Engineering',
+    label: 'Architecture',
     icon: <FaSatellite />, 
-    to: '/engineering',
+    to: '/architecture',
     notification: 0,
   },
               
   {
-    label: 'Game Design',
+    label: 'Nature',
     icon: <FaVrCardboard />, 
-    to: '/gamedesign',
+    to: '/nature',
+    notification: 0,
+  },
+
+  {
+    label: 'Business & Work',
+    icon: <FaSatellite />, 
+    to: '/business-work',
+    notification: 0,
+  },
+
+  {
+    label: 'Fashion',
+    icon: <FaSatellite />, 
+    to: '/fashion',
     notification: 0,
   }
 

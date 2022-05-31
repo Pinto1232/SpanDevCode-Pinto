@@ -16,13 +16,10 @@ export const SpanApi = createApi({
     endpoints: (builder) => ({ 
         getTopics: builder.query({
             query: () => createRequest('topics/?client_id=1yyEN8iqlLMqHhdKEXQhziAhl-lKwbNw6wti9niIlhg')
-        }),
-        getPhotos: builder.query({
-            query: () => createRequest('photos/?client_id=1yyEN8iqlLMqHhdKEXQhziAhl-lKwbNw6wti9niIlhg')
         })
     })
 });
 
 export const {
-    useGetTopicsQuery, useGetPhotosQuery,
+    useGetTopicsQuery,
 } = SpanApi;
