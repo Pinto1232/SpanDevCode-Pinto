@@ -29,6 +29,8 @@ export const SSidebarButton = styled.button`
   justify-content: center;
   cursor: pointer;
 
+  
+
   transform: ${({ isOpen }) => (!isOpen ? `rotate(180deg)` : `initial`)};
 `
 
@@ -241,6 +243,7 @@ export const LogoHome = styled.div`
 `
 
 export const MenuHome = styled.div`
+    ${btnReset};
     font-size: 18px;
     color: #fff;
     cursor: pointer;
@@ -253,6 +256,13 @@ export const MenuHome = styled.div`
     padding-right: 1.5em;
 
     margin-right: 12px;
+    border-radius: ${v.borderRadius};
+
+     &:hover {
+     background-color: #252846;
+     transform: translate(0%, -10%);
+      transition: 0.2s ease-in;
+   }
 `
 
 export const SMainSection = styled.div`
@@ -284,6 +294,7 @@ export const SParagraph = styled.div`
   margin-top: 10px;
 `
 export const SButton = styled.div`
+| ${btnReset};
    background: #e86729;
    padding-top: 5px;
    padding-bottom: 10px;
@@ -294,8 +305,17 @@ export const SButton = styled.div`
    margin-top: 1em;
    font-size: 19px;
    cursor: pointer;
+   border-radius: ${v.borderRadius};
 
    text-transform: uppercase;
+   transform: translate(0%);
+  transition: 0.3s ease-out;
+
+   &:hover {
+     background-color: #252846;
+     transform: translate(0%, -10%);
+      transition: 0.2s ease-in;
+   }
    
 `
 
