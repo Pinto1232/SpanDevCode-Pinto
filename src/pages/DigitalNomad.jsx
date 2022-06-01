@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { useGetDigitalNomadQuery } from '../services/DigitalNomadApi'
-import { Link } from 'react-router-dom'
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -43,9 +42,6 @@ const DigitalNomad = () => {
 
   if(isLoading) return 'Loading...' 
 
-  console.log('Digital Nomad', digitalNomadData);
-
-
    const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -55,7 +51,7 @@ const DigitalNomad = () => {
   
   return (
     <BoxCard>
-      {digitalNomadData?.slice(0, 8)?.map((item) => (
+      {digitalNomadData?.slice(0, 12)?.map((item) => (
           <Card sx={{ maxWidth: 345 }} style={{margin: '10px'}} key={item.id}>
           <CardHeader
             

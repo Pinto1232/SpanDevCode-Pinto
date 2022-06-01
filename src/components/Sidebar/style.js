@@ -323,8 +323,9 @@ export const SButton = styled.div`
 export const BoxCard = styled.div`
      display: flex;
      flex-wrap: wrap;
-     align-items: center;
+    
 
-     margin-left: 8em;
+     margin-left: 4em;
+  
 `
 
