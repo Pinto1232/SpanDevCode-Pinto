@@ -19,7 +19,7 @@ const HomePage = () => {
     }}>
         <HeadingHome>
                 <LogoHome className="menu"> <img src={logoSVG} alt="Span Digital" /></LogoHome>
-                <MenuHome className="menu">Menu</MenuHome>
+                <MenuHome className="menu">Register</MenuHome>
       </HeadingHome> 
       
       <SMainSection>

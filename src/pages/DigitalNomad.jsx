@@ -4,8 +4,10 @@ import moment from 'moment'
 import { useGetDigitalNomadQuery } from '../services/DigitalNomadApi'
 
 const DigitalNomad = () => {
-  const {data, isLoading, error, isError} = useGetDigitalNomadQuery()
-  /* if(isFetching) return 'Loading...' */
+  const { data, isLoading, error, isError } = useGetDigitalNomadQuery()
+  
+
+  if(isLoading) return 'Loading...' 
 
   console.log('Digital Nomad',data);
   
