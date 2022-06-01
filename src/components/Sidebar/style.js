@@ -230,6 +230,7 @@ export const HeadingHome = styled.div`
 
      & .menu{
        margin: 1em;
+       text-align: center;
      }
 `
 
@@ -240,6 +241,10 @@ export const LogoHome = styled.div`
     margin-left: 12px;
 
     font-weight: bold;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-left: 4%!important;
+    }
 
 `
 
@@ -264,6 +269,11 @@ export const MenuHome = styled.div`
      transform: translate(0%, -10%);
       transition: 0.2s ease-in;
    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin-left: 24%!important;
+    }
 `
 
 export const SMainSection = styled.div`
@@ -277,6 +287,8 @@ export const SMainSection = styled.div`
  color: #fff;
 
 
+
+
  `
 export const SSection = styled.div`
   display: flex;
@@ -287,12 +299,24 @@ export const SSection = styled.div`
 export const SHeader = styled.div`
   font-size: 2em;
   font-weight: bold;
+
+  @media (max-width: 768px) {
+    line-height: 1;
+    font-size: 100%;
+    text-align: center;
+  }
 `
 export const SParagraph = styled.div`
   text-transform: uppercase;
   font-size: 27px;
 
   margin-top: 10px;
+
+    @media (max-width: 768px) {
+    line-height: 1;
+    font-size: 50%;
+    text-align: center;
+  }
 `
 export const SButton = styled.div`
 | ${btnReset};
@@ -317,6 +341,14 @@ export const SButton = styled.div`
      transform: translate(0%, -10%);
       transition: 0.2s ease-in;
    }
+
+   @media (max-width: 768px) {
+      margin-left: 30%!important;
+      margin-right: 30%!important;
+      font-size: 12px;
+      padding: 20px;
+    }
+
 `
 
 /* Digital Nomad */
