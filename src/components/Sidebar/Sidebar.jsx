@@ -47,7 +47,7 @@ const Sidebar = () =>{
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const { data: tbData, isLoading } = useGetTopicsQuery()
   
-  console.log('Data Id', tbData);
+/*   console.log('Data Id', tbData); */
   
 
   return (
