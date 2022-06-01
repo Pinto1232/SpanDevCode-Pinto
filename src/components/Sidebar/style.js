@@ -356,8 +356,10 @@ export const BoxCard = styled.div`
      display: flex;
      flex-wrap: wrap;
     
-
-     margin-left: 4em;
+    margin-left: 4em;
+     @media (max-width: 768px) {
+        margin-left: 0px!important;
+     }
   
 `
 
