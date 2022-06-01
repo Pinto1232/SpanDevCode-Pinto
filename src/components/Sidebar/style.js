@@ -7,7 +7,7 @@ import { btnReset, v } from '../../styles/variables'
 export const SSidebar = styled.div`
   width: ${({ isOpen }) => (!isOpen ? `auto` : v.sidebarWidth)};
   background: ${({ theme }) => theme.bg};
-  height: 100vh;
+  height: auto;
   padding: ${v.lgSpacing}
 
 
@@ -218,7 +218,7 @@ export const SHeading = styled.div`
 /* Home Page */
 
 export const SContainer = styled.div`
-  height: 100vh;
+  min-height: 100%;
   background-blend-mode: overlay;
 `
 
