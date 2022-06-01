@@ -37,7 +37,7 @@ import
     FaHouseUser,
     FaCloudSun,
 } from 'react-icons/fa';
-  
+import { useGetTopicsQuery} from '../../services/SpanApi'
 import { ThemeContext} from './../../App'
 
 
@@ -45,6 +45,10 @@ import { ThemeContext} from './../../App'
 const Sidebar = () =>{
   const { theme, setTheme } = useContext(ThemeContext)
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const { data: tbData, isLoading } = useGetTopicsQuery()
+  
+  console.log('Data Id', tbData);
+  
 
   return (
     <SSidebar isOpen={sidebarOpen} >
@@ -117,6 +121,7 @@ const linkArray = [
     icon: <FaPlay />, 
     to: '/digital-nomad',
     notification: 0,
+  
   },
 
     {

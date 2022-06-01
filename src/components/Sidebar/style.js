@@ -317,6 +317,14 @@ export const SButton = styled.div`
      transform: translate(0%, -10%);
       transition: 0.2s ease-in;
    }
-   
+`
+
+/* Digital Nomad */
+export const BoxCard = styled.div`
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+
+     margin-left: 8em;
 `
 
