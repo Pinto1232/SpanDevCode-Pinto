@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useGetAchitectureQuery } from '../services/ArchitectureApi'
+import { useGetFashionQuery } from '../services/FashionApi'
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -22,6 +22,8 @@ import moment from 'moment';
 import { BoxCard } from '../components/Sidebar/style';
 
 
+
+
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -34,26 +36,28 @@ const ExpandMore = styled((props) => {
 }));
 
 
-const Architecture = () =>{
-  const { data: architectureData, isLoading, error, isError } = useGetAchitectureQuery();
+const DigitalNomad = () => {
+  const { data: fashionData, isLoading, error, isError } = useGetFashionQuery();
   const [expanded, setExpanded] = useState(false);
 
   if(isLoading) return 'Loading...' 
 
-  const handleExpandClick = () => {
+   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
-  
 
+
+  
+  
   return (
     <BoxCard>
-      {architectureData?.slice(0, 12)?.map((item) => (
+      {fashionData?.slice(0, 12)?.map((item) => (
           <Card sx={{ maxWidth: 345 }} style={{margin: '10px'}} key={item.id}>
           <CardHeader
             
             avatar={
               <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                <img src={item.user.profile_image.large} alt="" />
+                <img src={item.user.profile_image.medium} alt="" />
               </Avatar>
             }
             action={
@@ -100,4 +104,4 @@ const Architecture = () =>{
   )
 }
 
-export default Architecture
+export default DigitalNomad

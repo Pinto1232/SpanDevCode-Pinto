@@ -9,6 +9,7 @@ import {NatureApi} from '../services/NatureApi'
 import { TexturesPatternsApi } from '../services/TexturesPatternsApi'
 import { TreeDRendersApi } from '../services/TreeDRendersApi'
 import { WallpapersApi } from '../services/WallpapersApi'
+import { FashionApi } from '../services/FashionApi'
 
 
 
@@ -24,6 +25,7 @@ export default configureStore({
         [TexturesPatternsApi.reducerPath]: TexturesPatternsApi.reducer,
         [TreeDRendersApi.reducerPath]: TreeDRendersApi.reducer,
         [WallpapersApi.reducerPath]: WallpapersApi.reducer,
+        [FashionApi.reducerPath]: FashionApi.reducer,
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(SpanApi.middleware),
 });

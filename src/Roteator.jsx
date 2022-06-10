@@ -10,13 +10,13 @@ import Experimental from './pages/Experimental'
 import Nature from './pages/Nature'
 import BusinessWork from './pages/BusinessWork'
 import Architecture from './pages/Architecture'
+import Fashion from './pages/Fashion'
 import Settings from './pages/Settings'
 
 
 
 const Roteator = () => {
   return (
-  
           <Routes>
               <Route path="/" element={<HomePage />}></Route>
               <Route path="/digital-nomad" element={<DigitalNomad />}></Route>
@@ -27,10 +27,10 @@ const Roteator = () => {
               <Route path="/experimental" element={<Experimental />}></Route>
               <Route path="/architecture" element={<Architecture/>}></Route>
               <Route path="/nature" element={<Nature/>}></Route>
+              <Route path="/fashion" element={<Fashion/>}></Route>
               <Route path="/business-work" element={<BusinessWork/>}></Route>
               <Route path="/settings" element={<Settings/>}></Route>
           </Routes>
-
   )
 }
 
